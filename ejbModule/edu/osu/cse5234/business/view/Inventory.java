@@ -12,25 +12,20 @@ public class Inventory implements Serializable{
 	private static final long serialVersionUID = 2L;
 
 	private List<Item> items;	
-	
-	private static final String[] FRUITS = {"apple", "orange", "peach", "pear", "lemonade"};
-	
-	private Inventory() {
+		
+	public Inventory() {
 		items = new ArrayList<Item>();
-		for (int i = 0; i < FRUITS.length; i++) {
-			items.add(new Item(FRUITS[i], "100"));
-		}
 	}
 	
-	private static Inventory instance = new Inventory();
+//	private static Inventory instance = new Inventory();
 	
-	public static Inventory getInstance(){
-		return instance;
-	}
+//	public static synchronized Inventory getInstance(){
+//		return instance;
+//	}
 	
-	public List<Item> getItems() {
-		return items;
-	}
+//	public List<Item> getItems() {
+//		return items;
+//	}
 
 	public void setItems(List<Item> items) {
 		this.items = items;
