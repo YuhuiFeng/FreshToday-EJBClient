@@ -28,7 +28,7 @@ public class Item implements Serializable {
 	}
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID")
 	public int getId() {
 		return id;
